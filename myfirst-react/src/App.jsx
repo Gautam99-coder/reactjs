@@ -1,7 +1,8 @@
-const Hello = () => {
-  return (
+const House = (props) =>{
+  console.log(props);
+  return(
     <div>
-      <p>Hello Spider</p>
+      <p>house {props.name}</p>
     </div>
   )
 }
@@ -9,11 +10,9 @@ const Hello = () => {
 const App = () => {
   return (
     <div>
-      <Hello />
       <h1>Greetings</h1>
-      <Hello/>
-      <Hello/>
-      
+      <House name='spider'/>
+      <House/>
     </div>
   )
 }
