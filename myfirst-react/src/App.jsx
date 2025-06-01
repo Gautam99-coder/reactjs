@@ -12,7 +12,7 @@ const Button = (props) => {
     </button>
   )
 }
-
+debugger;
 const History=(props)=>{
   if(props.allClicks.length === 0){
     return(
@@ -45,7 +45,16 @@ const App = () => {
     setRight(updateright)
     setTotal(updateright+right)
   }
-const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
+const Button = (props) => { 
+
+  console.log('props value is', props)
+  const { onClick, text } = props
+  return (
+    <button onClick={onClick}>
+      {text}
+    </button>
+  )
+}
   return (
     <div>
       {left}
