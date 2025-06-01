@@ -45,13 +45,13 @@ const App = () => {
     setRight(updateright)
     setTotal(updateright+right)
   }
-
+const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
   return (
     <div>
       {left}
-      <button onClick={HandlLeftClicks}>left</button>
+      <Button onClick={HandlLeftClicks} text='left'/>
       {right}
-      <button onClick={HandlRightClicks}>right</button>
+      <Button onClick={HandlRightClicks} text='right'/>
       <History allClicks={allClicks}/>
       <p>total: {total}</p>
     </div>
