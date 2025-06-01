@@ -13,19 +13,14 @@ const Button = (props) => {
   )
 }
 const App = () => {
-
-  const [ counter, setCounter ] = useState(0)
-  const increastByOne=()=>setCounter(counter+1);
-  const decreaseByOne=()=>setCounter(counter-1)
-  const setToZero=()=>setCounter(0)
+  const [left,setLeft]=useState(0)
+  const [right,setRight]=useState(0)
   return (
     <div>
-      <Display counter={counter}/>
-      <Button onClick={increastByOne} text='plse' />
-      <br />
-      <Button onClick={setToZero} text='zero' />
-      <br />
-      <Button onClick={decreaseByOne} text='min' /> 
+      {left}
+      <button onClick={()=>setLeft(left+1)}>left</button>
+      {right}
+      <button onClick={()=>setRight(right+1)}>right</button>
     </div>
   )
 }
