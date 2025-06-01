@@ -20,13 +20,15 @@ const App = () => {
 
   const HandlLeftClicks=()=>{
     setAll(allClicks.concat('L'))
-    setLeft(left+1)
-    setTotal(left+right)
+    const updateleft=left+1;
+    setLeft(updateleft)
+    setTotal(updateleft+right)
   }
    const HandlRightClicks=()=>{
     setAll(allClicks.concat('R'))
-    setRight(right+1)
-    setTotal(left+right)
+    const updateright=right+1;
+    setRight(updateright)
+    setTotal(updateright+right)
   }
 
   return (
